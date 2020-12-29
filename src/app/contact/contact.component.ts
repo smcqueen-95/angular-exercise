@@ -21,6 +21,7 @@ export class ContactComponent implements OnInit {
     'email': ''
   };
 
+  
   validationMessages = {
     'firstname': {
       'required':      'First Name is required.',
