@@ -2,7 +2,8 @@ import { Component, OnInit, ViewChild, Inject } from '@angular/core';
 import {Dish} from '../shared/dish';
 import { DishService } from '../services/dish.service';
 import { switchMap } from 'rxjs/operators';
-import { trigger, state, style, animate, transition } from '@angular/animations';
+import { visibility } from '../animations/app.animations';
+import { flyInOut, expand } from '../animations/app.animations';
 
 import { Params, ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
@@ -15,18 +16,15 @@ import { Rating } from '../shared/rating';
   templateUrl: './dishdetail.component.html',
   styleUrls: ['./dishdetail.component.scss'],
   animations: [
-    trigger('visibility', [
-        state('shown', style({
-            transform: 'scale(1.0)',
-            opacity: 1
-        })),
-        state('hidden', style({
-            transform: 'scale(0.5)',
-            opacity: 0
-        })),
-        transition('* => *', animate('0.5s ease-in-out'))
-    ])
-  ]
+    visibility(),
+    flyInOut(),
+    expand()
+  ],
+  // tslint:disable-next-line:use-host-property-decorator
+  host: {
+    '[@flyInOut]': 'true',
+    'style': 'display: block;'
+    },
 })
 export class DishdetailComponent implements OnInit {
 
