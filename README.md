@@ -1,7 +1,7 @@
 # Front-End JavaScript Frameworks: Angular
 This project was done in my Coursera Specialization Course
 
-## About the Author
+# About the Author
 Name: Samira Mc Queen
 [LinkedIn](https://www.linkedin.com/in/samira-mc-queen-1882431a7/)
 
@@ -9,13 +9,26 @@ Free Spririted Caribbean Woman.
 Software Developer and aspiring Game Developer
 
 ![Certification](./src/assets/images/Angular.png)
-### Project 
+# Project 
 ![Video](./src/assets/images/angular.gif)
 
 ## Experience with Project
 - This is my second course in the Specialization and it was based around Angular. 
 - This was my first time using Angular and Angular Material
-## Project setup
+
+# Application Features
+- User can view Menu of the restaurant
+- User can leave a comment on the dishes that are displayed in the menu
+- User can send feedback in the contact us page
+
+# Frontend Built With
+- Angular
+- Angular Material
+
+# Backend Built With
+- Json server
+
+# Project setup
 Once the project is downloaded locally on your device do the following:
 `
 npm install
