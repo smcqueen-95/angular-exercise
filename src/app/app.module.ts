@@ -40,50 +40,47 @@ import { LoginComponent } from './login/login.component';
 import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MenuComponent,
-    DishdetailComponent,
-    HeaderComponent,
-    FooterComponent,
-    HomeComponent,
-    AboutComponent,
-    ContactComponent,
-    LoginComponent,
-    HighlightDirective,
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    FlexLayoutModule,
-    AppRoutingModule,
-    MatListModule,
-    MatGridListModule,
-    MatCardModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatFormFieldModule, 
-    MatInputModule,
-    MatCheckboxModule,
-    MatSelectModule,
-    MatSlideToggleModule,
-    MatProgressSpinnerModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatSliderModule,
-    HttpClientModule,
-  ],
-  providers: [
-    DishService,
-    PromotionService,
-    LeaderService,
-    ProcessHTTPMsgService,
-    {provide: 'BaseURL', useValue: baseURL}
-  ],
-  entryComponents: [
-    LoginComponent
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        MenuComponent,
+        DishdetailComponent,
+        HeaderComponent,
+        FooterComponent,
+        HomeComponent,
+        AboutComponent,
+        ContactComponent,
+        LoginComponent,
+        HighlightDirective,
+    ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        MatToolbarModule,
+        FlexLayoutModule,
+        AppRoutingModule,
+        MatListModule,
+        MatGridListModule,
+        MatCardModule,
+        MatButtonModule,
+        MatDialogModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatCheckboxModule,
+        MatSelectModule,
+        MatSlideToggleModule,
+        MatProgressSpinnerModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatSliderModule,
+        HttpClientModule,
+    ],
+    providers: [
+        DishService,
+        PromotionService,
+        LeaderService,
+        ProcessHTTPMsgService,
+        { provide: 'BaseURL', useValue: baseURL }
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
