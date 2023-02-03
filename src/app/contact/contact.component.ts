@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, Inject} from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { Feedback, ContactType } from '../shared/feedback';
 import { flyInOut, expand } from '../animations/app.animations';
 import { FeedbackService} from '../services/feedback.service';
@@ -20,7 +20,7 @@ import { FeedbackService} from '../services/feedback.service';
 })
 export class ContactComponent implements OnInit {
  
-  feedbackForm: FormGroup;
+  feedbackForm: UntypedFormGroup;
   feedback: Feedback;
   feedbackcopy: Feedback;
   result: Feedback;
@@ -58,7 +58,7 @@ export class ContactComponent implements OnInit {
     },
   };
 
-  constructor(private fb: FormBuilder,
+  constructor(private fb: UntypedFormBuilder,
     private feedbackService: FeedbackService,
     @Inject('BaseURL') private baseURL) {
     this.createForm();

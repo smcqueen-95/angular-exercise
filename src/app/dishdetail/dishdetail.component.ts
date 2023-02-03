@@ -7,7 +7,7 @@ import { flyInOut, expand } from '../animations/app.animations';
 
 import { Params, ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-import { FormBuilder, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, FormGroupDirective, Validators } from '@angular/forms';
 import { Comment } from '../shared/comment';
 import { Rating } from '../shared/rating';
 
@@ -43,7 +43,7 @@ export class DishdetailComponent implements OnInit {
   next: string;
   dish: Dish;
   currentdate: Date;
-  commentForm: FormGroup;
+  commentForm: UntypedFormGroup;
   comment: Comment;
   rating: Rating;
   @ViewChild(FormGroupDirective) commentFormDirective: FormGroupDirective;
@@ -74,7 +74,7 @@ export class DishdetailComponent implements OnInit {
     private dishService: DishService,
     private route: ActivatedRoute,
     private location: Location,
-    private fb: FormBuilder,
+    private fb: UntypedFormBuilder,
     @Inject('BaseURL') private BaseURL) 
   { 
     this.currentdate = new Date();
